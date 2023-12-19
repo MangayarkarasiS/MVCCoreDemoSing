@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<h1>Simple Data from viewBag : @ViewBag.EmpName</h1>
+<h1>Simple Data from viewData : @ViewData["EmpDesig"]</h1>
+
+<!--ViewBag is a wrapper over viewData-->
+<h2>Complex Data from viewBag :  </h2>
+<ul>
+@foreach (var item in @ViewBag.EmpDet)
+      {<li>@item</li>}
+</ul>
+
+<!--ViewData has high performance over ViewBag. 
+    But we need to do a data conversion for ViewData to work-->
+
+<h1>Complex Data from viewData : </h1>
+<ul>
+    @foreach (var item in @ViewData["EmpDetVD"] as List<string>)
+    {
+        <li>@item</li>
+    }
+</ul>
+
+
+
+
+
+
+
+
+<!--<p>Kestrel - internal server
+
+Microsoft - introduced a server called as Kestrel 
+Kestrel - it's a internal server, which will be supporting crossplatform
+Uses - internal server(kestrel), external server(IIS, apache, nginx)
+</p>-->
+
+@{
+    var EmpDesig="HR";
+    var greeting = "Hello";
+    var WelcomeMes = greeting +@" I am ""Junior"" " + EmpDesig;//printing of double quot
+    var Post = true;
+    if(Post)
+    {
+        @WelcomeMes;
+        
+    }
+    else
+    {        
+        @greeting;
+    }
+
+}
+<h2>I am @WelcomeMes</h2>
+
+
+
+
+
+
+

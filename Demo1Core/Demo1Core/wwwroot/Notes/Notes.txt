@@ -1,0 +1,13 @@
+﻿Entity Framework Core:
+
+1. It's a connectivity tool for connecting our front end and backend
+2. It's a open source
+3. It supports cross platform
+4. Its an ORM framework - Object Relational Mapping framework
+
+Two approach:
+
+1. Database first approach
+2. Code first approach
+
+Product - PID, PDTNm, PDTPRice

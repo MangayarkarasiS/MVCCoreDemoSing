@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "NewMeth";
+}
+<h2>ViewBag value: @ViewBag.NewName </h2>
+<h1>New Method Tempdata value: @ViewBag.Name</h1>
+@{
+    TempData.Keep();
+}
+<img src="~/Image/glow.jpg" height="100px" width="100px" />
+@*rendering partial view*@
+@{
+    Html.RenderPartial("PView");
+}
+
